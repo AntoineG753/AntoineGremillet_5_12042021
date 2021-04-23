@@ -109,8 +109,8 @@ th, td {
 
 .hidden {
   visibility: hidden;
-  width: 1px;
-  height: 1px;
+  width: 0px;
+  height: 0px;
   position: absolute;
   left: 0px;
 }

@@ -9,7 +9,7 @@ import {
     if (0 >= localStorage.length) {
         
         let panierPlein = document.getElementById("panierPlein");
-        panierPlein.classList.add("hidden")
+        panierPlein.classList.add("visually-hidden")
         let panierVide = document.getElementById("panierVide");
         panierVide.classList.remove("hidden")
     } else {
