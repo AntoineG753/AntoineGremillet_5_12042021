@@ -40,7 +40,7 @@ import {
             tdPrixTotal.innerHTML = data.price * QuantiteProduit / 100;
             let tdSuprimmer = document.createElement("td");
             let tdBtn = document.createElement("button");
-            tdBtn.classList.add("btn", "btn-danger");
+            tdBtn.classList.add("btn", "btn-danger", "fts");
             tdBtn.setAttribute("id", e)
             let tdIcon = document.createElement("i");
             tdIcon.classList.add("fas", "fa-trash-alt");

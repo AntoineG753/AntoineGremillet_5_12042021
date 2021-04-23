@@ -67,9 +67,13 @@
 }
 .tableau-style{
     border-collapse: collapse;
-    width: 100%;
     text-align: center;
-   margin-top: 2vw;
+    margin-top: 2vw;
+    font-size: 0.8rem;
+}
+.fts-panier{
+    font-size: 1rem;
+    font-weight: bold;
 }
 tr, th{
     border: 1px solid rgb(198, 136, 255);

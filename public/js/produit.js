@@ -19,13 +19,13 @@ fetch(apiUrl + `/${articleId}`) // on fait un fetch normale mais on a mis les pa
                 <div class="col-lg-5 col-0 px-0">
                 <img class="coverImg" src="${data.imageUrl}" alt="">
                 </div>
-                <div class="bg-light p-4 col-lg-7">
+                <div class="bg-light p-4 col-lg-7 ">
                     <h1 class="h3 text-center">${data.name}</h1>
                     <p class="col-lg-11 mt-4">${data.description}</p>
                     <p>${data.price / 100} €</p>
-                    <select class="form-select mb-3 mt-4" id="selectColor"></select>
+                    <select class="form-select  mb-3 mt-4" id="selectColor"></select>
                     <div class="row mt-5 justify-content-between">
-                        <div class="col-lg-3 d-flex" id="choixQuantite">
+                        <div class="col-lg-3 col-md-3 mb-3 d-flex" id="choixQuantite">
                             <button class="btn btn-primary btn-purple" type="button" id="moins">-</button>
                             <input id="quantiteProduit" type="text" class="form-control text-center" aria-label="Quantité de produit" value="1"  minlength="1" maxlength="2" >
                             <button class="btn btn-primary btn-purple" type="button" id="plus">+</button>

@@ -46,7 +46,7 @@
     <div class="container visually-hidden" id="panierPlein">
       <h1 class="text-center m-5">Mon panier</h1>
       <div>
-        <table class="tableau-style bg-panier" >
+        <table class="tableau-style bg-panier col-md-12 col-lg-12 col-12" >
           <thead class="bg-card">
             <tr>
               <th>Produit</th>
@@ -59,20 +59,44 @@
           <tbody id="tablePanier">
           </tbody>
         </table>
-        <div class="container p-1 total-panier">
+        <div class="container p-1 total-panier" >
           <div class="d-flex flex-row justify-content-around">
             <div>
-              <p class="h4">Total Panier</p>
+              <p class="fts-panier">Total Panier</p>
             </div>
             <div>
-              <p class="h4"><span id="totalPrixPanier"></span> €</p>
+              <p class="fts-panier"><span id="totalPrixPanier"></span> €</p>
             </div>
           </div>
         </div>
       </div>
-      <div>
-
-      </div>
+      <form class="mt-5">
+        <div class="row">
+          <div class="col-lg-6 col-md-6">
+            <label for="nom">Nom</label>
+            <input type="text" name="nom" id="nom" class="form-control" placeholder="nom" minlength="1" maxlength="26" required pattern="[A-Za-z]{1,32}">
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <label for="prenom">Prénom</label>
+            <input type="text" name="prénom" id="prenom" class="form-control" placeholder="prénom" minlength="1" maxlength="26" required pattern="[A-Za-z]{1,32}">
+          </div>
+          <div class="col-12 col-lg-7 col-md-7">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" name="email" class="form-control" minlength="6" maxlength="50" required placeholder="nom.prenom@exemple.com">
+          </div>
+          <div class="col-12 col-lg-9 col-md-9">
+            <label for="adresse" class="form-label">Adresse</label>
+            <input type="text" id="adresse" name="adresse" class="form-control" minlength="7" maxlength="75" placeholder="Adresse" required pattern="[A-Za-z0-9]{7,75}">
+          </div>
+          <div class="col-12 col-lg-5 col-md-5">
+            <label for="ville" class="form-label">Ville</label>
+            <input type="text" id="ville" name="ville" class="form-control" minlength="1" maxlength="26" placeholder="Ville" required pattern="\D+">
+          </div>
+        </div>
+        <div class="col-12 mt-3">
+          <button class="btn btn-outline-primary" type="submit" id="formSubmit">Valider</button>
+        </div>
+      </form>
     </div>
     <div class="container-fluid hidden" id="panierVide">
       <div class="row">
