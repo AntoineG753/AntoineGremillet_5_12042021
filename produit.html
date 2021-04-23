@@ -10,8 +10,8 @@
   <link rel="shortcut icon" type="image/png" href="images/favicon.png">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700;900&display=swap" rel="stylesheet" async>
-  <script type="module" src="./public/js/panier.js" async></script>
-  <title>Orinico - Panier</title>
+  <script type="module" src="public/js/produit.js" async></script>
+  <title>Orinico - produit</title>
 </head>
 
 <body>
@@ -32,7 +32,7 @@
                   <a class="nav-link active" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" href="panier.html">Panier</a>
+                  <a class="nav-link active" href="panier.html">Panier<span class="badge bg-black" id="nombreProduitPanier"></span></a>
                 </li>
               </ul>
             </div>
@@ -42,50 +42,12 @@
     </div>
   </header>
   <main>
-   
-    <div class="container" id="panierPlein">
-      <h1 class="text-center m-5">Mon panier</h1>
-      <div>
-        <table class="tableau-style bg-panier" >
-          <thead class="bg-card">
-            <tr>
-              <th>Produit</th>
-              <th>Prix a l'unité</th>
-              <th>Quantité</th>
-              <th>Prix total</th>
-              <th>Supprimer</th>
-            </tr>
-          </thead>
-          <tbody id="tablePanier">
-          </tbody>
-        </table>
-        <div class="container p-1 total-panier">
-          <div class="d-flex flex-row justify-content-around">
-            <div>
-              <p class="h4">Total Panier</p>
-            </div>
-            <div>
-              <p class="h4"><span id="totalPrixPanier"></span> €</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-
-      </div>
+    <div class="container-fluid center-page" id="produitView">
+        
     </div>
-    <div class="container-fluid hidden" id="panierVide">
-      <div class="row">
-        <div class="text-center size-box-panierVide">
-          <p class="size-titre-panierVide"><strong>Votre Panier est vide</strong></p>
-          <i class="far fa-frown-open size-icon-panierVide"></i>
-        </div>
-      </div>
-    </div>
-
   </main>
   <footer>
-    <div class="container-fluid bg-card mt-5">
+    <div class="container-fluid bg-card margin-top-card">
       <div class="container">
         <div>
           <ul class="list-inline text-center margin-0 p-4">
