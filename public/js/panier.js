@@ -1,16 +1,12 @@
 const apiUrl = "http://localhost:3000/api/teddies";
-import {
-    nmbpp,
-    rechercheProduitStorage,
- } from "./utils.js";
-
-
 
     if (0 >= localStorage.length) {
-        
-        
         let panierVide = document.getElementById("panierVide");
         panierVide.classList.remove("hidden")
+        let panierVideBis = document.getElementById("panierVideBis");
+        panierVideBis.classList.remove("hidden")
+        let iconPanierVide = document.getElementById("iconPanierVide");
+        iconPanierVide.classList.remove("hidden")
     } else {
         let I = localStorage.length;
         let prixTotalPanier = 0;
@@ -74,9 +70,10 @@ import {
                 if (0 >= localStorage.length) {
             
                     let panierPlein = document.getElementById("panierPlein");
-                    panierPlein.classList.add("hidden")
-                    let panierVide = document.getElementById("panierVide");
-                    panierVide.classList.remove("hidden")
+                    panierPlein.classList.add("hidden");
+                    panierVide.classList.remove("hidden");
+                    panierVideBis.classList.remove("hidden");
+                    iconPanierVide.classList.remove("hidden");
                 }
             });
 
@@ -84,4 +81,46 @@ import {
         })
 
     }
-    }
+    };
+    // Creation de la requete post en utilisant fetch
+
+    // initialisation 
+    let contact = {};
+    let products = [];
+    // recuperation du formulaire + ecoute au submit
+    let formulaireClient = document.getElementById("formClient");
+    formulaireClient.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        contact = {
+            firstName: formulaireClient.elements.prenom.value,
+            lastName: formulaireClient.elements.nom.value,
+            address: formulaireClient.elements.adresse.value,
+            city: formulaireClient.elements.ville.value,
+            email: formulaireClient.elements.email.value,
+        };
+
+      
+        for (let i = 0; i < localStorage.length; i++) {
+            products.push(localStorage.key(i));
+        }
+
+        fetch(apiUrl + "/order", {
+            method: 'POST', 
+            headers: {"content-type": 'application/json'}, 
+            body: JSON.stringify({contact, products
+            })
+        })
+        .then(res => res.json())
+        .then(data => {
+            
+            let prixTotal = totalPrixPanier.innerHTML;
+            localStorage.clear();
+            localStorage.setItem("orderId", `${data.orderId}`);
+            localStorage.setItem("prixTotal", `${prixTotal}`)
+            window.location.assign("./commande.html");
+           
+        })
+        
+    });
+    

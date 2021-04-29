@@ -89,7 +89,7 @@ fetch(apiUrl)
             cardBody.appendChild(cardText);
             cardBody.appendChild(divPrice);
             cardBody.appendChild(btnGroup);
-
+            
             col.appendChild(card);
             card.appendChild(img);
             card.appendChild(cardBody);

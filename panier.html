@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-  <link rel="stylesheet" href="./public/css/style.css" />
+  <link rel="stylesheet" href="./public/css/style.css"/>
   <link rel="shortcut icon" type="image/png" href="images/favicon.png">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700;900&display=swap" rel="stylesheet" async>
@@ -70,7 +70,7 @@
           </div>
         </div>
       </div>
-      <form class="mt-5">
+      <form class="w-auto mt-5" id="formClient">
         <div class="row">
           <div class="col-lg-6 col-md-6">
             <label for="nom">Nom</label>
@@ -86,7 +86,7 @@
           </div>
           <div class="col-12 col-lg-9 col-md-9">
             <label for="adresse" class="form-label">Adresse</label>
-            <input type="text" id="adresse" name="adresse" class="form-control" minlength="7" maxlength="75" placeholder="Adresse" required pattern="[A-Za-z0-9]{7,75}">
+            <input type="text" id="adresse" name="adresse" class="form-control" minlength="7" maxlength="75" placeholder="Adresse" required pattern="^[0-9][A-Za-z0-9 ]{7,75}">
           </div>
           <div class="col-12 col-lg-5 col-md-5">
             <label for="ville" class="form-label">Ville</label>
@@ -100,9 +100,9 @@
     </div>
     <div class="container-fluid hidden" id="panierVide">
       <div class="row">
-        <div class="text-center size-box-panierVide">
+        <div class="text-center size-box-panierVide hidden" id="panierVideBis">
           <p class="size-titre-panierVide"><strong>Votre Panier est vide</strong></p>
-          <i class="far fa-frown-open size-icon-panierVide"></i>
+          <i class="far fa-frown-open size-icon-panierVide hidden" id="iconPanierVide"></i>
         </div>
       </div>
     </div>
