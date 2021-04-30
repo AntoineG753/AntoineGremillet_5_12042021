@@ -22,7 +22,6 @@ let nmbpp = function () {
         for (let i = 0; i < localStorage.length; i++){
             
                 valeurPanier += parseInt(localStorage.getItem(localStorage.key(i)));
-                console.log(parseInt(localStorage.getItem(localStorage.key(i))));
         }
         if (valeurPanier !== 0) {
             nombreProduitPanier.textContent = valeurPanier;
