@@ -15,7 +15,6 @@ const apiUrl = "http://localhost:3000/api/teddies";
         for (let i = 0; i < I; i++) {
 
             let e = localStorage.key(i);
-            console.log(e)
             fetch(apiUrl + `/${e}` )
             .then(res => res.json())
             .then(data => {
@@ -76,14 +75,12 @@ const apiUrl = "http://localhost:3000/api/teddies";
                     iconPanierVide.classList.remove("hidden");
                 }
             });
-
-
         })
-
-    }
-    };
+        .catch(
+            function(error){ alert("Erreur : " + error); // ici on vient rajouter une erreur si jamais la fonction ne fonctionne pas
+        });
+    }};
     // Creation de la requete post en utilisant fetch
-
     // initialisation 
     let contact = {};
     let products = [];
@@ -91,7 +88,6 @@ const apiUrl = "http://localhost:3000/api/teddies";
     let formulaireClient = document.getElementById("formClient");
     formulaireClient.addEventListener('submit', function (e) {
         e.preventDefault();
-
         contact = {
             firstName: formulaireClient.elements.prenom.value,
             lastName: formulaireClient.elements.nom.value,
@@ -99,12 +95,11 @@ const apiUrl = "http://localhost:3000/api/teddies";
             city: formulaireClient.elements.ville.value,
             email: formulaireClient.elements.email.value,
         };
-
       
         for (let i = 0; i < localStorage.length; i++) {
             products.push(localStorage.key(i));
         }
-
+        // envoi au server avec fetch en passant par la methode post
         fetch(apiUrl + "/order", {
             method: 'POST', 
             headers: {"content-type": 'application/json'}, 
@@ -121,6 +116,5 @@ const apiUrl = "http://localhost:3000/api/teddies";
             window.location.assign("./commande.html");
            
         })
-        
     });
     

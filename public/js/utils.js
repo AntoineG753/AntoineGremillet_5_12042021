@@ -1,6 +1,6 @@
 
 
-
+//  function pour rechercher les produits dans le localStorage
 let rechercheProduitStorage = function (storageProduitId) {
                     
     if (localStorage.getItem(storageProduitId)) {  
@@ -36,5 +36,4 @@ let nmbpp = function () {
 export {
     nmbpp,
     rechercheProduitStorage,
-  
 } ;

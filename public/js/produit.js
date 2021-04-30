@@ -36,10 +36,8 @@ fetch(apiUrl + `/${articleId}`) // on fait un fetch normale mais on a mis les pa
                     </div>
                 </div>
         </div>`
-
-
+        
         //creation des option de produit
-
         for (let i = 0; i < data.colors.length; i++) { 
             let selectElement = document.getElementById("selectColor"); // on recupere notre selecteur en le nommant selectElement
             let optionElement = document.createElement("option"); // on nomme les option quil y aura dedans optionElement et on la créé evec createElement
@@ -47,9 +45,7 @@ fetch(apiUrl + `/${articleId}`) // on fait un fetch normale mais on a mis les pa
             optionElement.textContent = `${data.colors[i]}`; // on lui rajoute la meme chose que au dessu mais en partie visible (text)
             selectElement.appendChild(optionElement); // on lui de mettre les option dans selectElement ( donc dans notre barre de selection)
         }
-
         // creation de la gestion du nombre de d'article
-
         let quantiteProduit = document.getElementById("quantiteProduit"); // on recupere notre element html et on le nome 
 
         let btnPlus = document.getElementById("plus");// on recupere notre bouton plus et on le nome btnPlus
@@ -66,9 +62,6 @@ fetch(apiUrl + `/${articleId}`) // on fait un fetch normale mais on a mis les pa
             }
         });
 
-
-        
-
         document.getElementById(_id).addEventListener('click', function () {
 
             
@@ -79,7 +72,7 @@ fetch(apiUrl + `/${articleId}`) // on fait un fetch normale mais on a mis les pa
             localStorage.setItem(_id, nombreProduit);// on lui de re ajouter la key avec ca nouvelle valeur  (+1) 
             nmbpp(); // on apelle la function qui nous sert a afficher et aditioner la valeur a coté du mot panier de la bare de nav
         });
-        nmbpp(); // ici je refait apelle la fonction qui sert d'affichage a coter de panier mais en dehor de la function (car cette function sactive au click, donc en refrsh la page tent que je click pas cela ne safiche pas)
+        nmbpp(); // ici je refait apelle la fonction qui sert d'affichage a coté de panier mais en dehor de la function (car cette function sactive au click, donc en refrsh la page tent que je click pas cela ne safiche pas)
     })
     .catch(
         function(error){ alert("Erreur : " + error); // ici on vient rajouter une erreur si jamais la fonction ne fonctionne pas
