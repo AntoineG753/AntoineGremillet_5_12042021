@@ -1,6 +1,10 @@
 if(localStorage.getItem("orderId")) {
     let commandeTrue = document.getElementById("contenaireCommandeTrue");
     commandeTrue.classList.remove("hidden");
+    let pCommandeTrue = document.getElementById("pCommandeTrue");
+    pCommandeTrue.classList.remove("hidden");
+    let h1CommandeTrue = document.getElementById("h1CommandeTrue");
+    h1CommandeTrue.classList.remove("hidden");
     let paragraphePrixTotal = document.createElement("p");
     paragraphePrixTotal.classList.add("h2");
     paragraphePrixTotal.classList.add("mb-4", "mt-4");
@@ -18,5 +22,6 @@ if(localStorage.getItem("orderId")) {
     pCommandeFalse.classList.remove("hidden")
     let iconCommandeFalse = document.getElementById("iconCommandeFalse")
     iconCommandeFalse.classList.remove("hidden")
+    iconCommandeFalse.classList.add("mb-5")
 }
 localStorage.clear();

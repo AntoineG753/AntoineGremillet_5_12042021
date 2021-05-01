@@ -77,7 +77,7 @@ const apiUrl = "http://localhost:3000/api/teddies";
             });
         })
         .catch(
-            function(error){ alert("Erreur : " + error); // ici on vient rajouter une erreur si jamais la fonction ne fonctionne pas
+            function(error){ alert("Erreur : Veuillez réessayer plus tard \n" + error); // ici on vient rajouter une erreur si jamais la fonction ne fonctionne pas
         });
     }};
     // Creation de la requete post en utilisant fetch

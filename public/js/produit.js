@@ -27,7 +27,7 @@ fetch(apiUrl + `/${articleId}`) // on fait un fetch normale mais on a mis les pa
                     <div class="row mt-5 justify-content-between">
                         <div class="col-lg-3 col-md-3 mb-3 d-flex" id="choixQuantite">
                             <button class="btn btn-primary btn-purple" type="button" id="moins">-</button>
-                            <input id="quantiteProduit" type="text" class="form-control text-center" aria-label="Quantité de produit" value="1"  minlength="1" maxlength="2" >
+                            <input id="quantiteProduit" type="text" class="form-control text-center" aria-label="Quantité de produit" value="1"  minlength="1" maxlength="2">
                             <button class="btn btn-primary btn-purple" type="button" id="plus">+</button>
                         </div>
                         <div class="col-lg-4">
@@ -36,7 +36,7 @@ fetch(apiUrl + `/${articleId}`) // on fait un fetch normale mais on a mis les pa
                     </div>
                 </div>
         </div>`
-        
+
         //creation des option de produit
         for (let i = 0; i < data.colors.length; i++) { 
             let selectElement = document.getElementById("selectColor"); // on recupere notre selecteur en le nommant selectElement
@@ -75,5 +75,5 @@ fetch(apiUrl + `/${articleId}`) // on fait un fetch normale mais on a mis les pa
         nmbpp(); // ici je refait apelle la fonction qui sert d'affichage a coté de panier mais en dehor de la function (car cette function sactive au click, donc en refrsh la page tent que je click pas cela ne safiche pas)
     })
     .catch(
-        function(error){ alert("Erreur : " + error); // ici on vient rajouter une erreur si jamais la fonction ne fonctionne pas
+        function(error){ alert("Erreur : Veuillez réessayer plus tard \n" + error); // ici on vient rajouter une erreur si jamais la fonction ne fonctionne pas
     });

@@ -2,7 +2,6 @@ const apiUrl = "http://localhost:3000/api/teddies";
 import {
     nmbpp,
     rechercheProduitStorage,
-    
  } from "./utils.js";
 
 fetch(apiUrl)
