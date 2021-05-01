@@ -64,7 +64,7 @@ fetch(apiUrl)
             btnBuy.classList.add("btn", "btn-sm", "btn-outline-primary");
             btnBuy.setAttribute("id" , _id);
             btnBuy.innerText = "Acheter";
-              
+
             // maintenant on va lié notre creation de card javascript au html, pour on va commencé par faire l'architecture de la carte 
             btnGroup.appendChild(btnView);
             btnGroup.appendChild(btnBuy);
@@ -93,6 +93,6 @@ fetch(apiUrl)
        }
     })
     .catch(
-        function(error){ alert("Erreur : " + error); // ici on vient rajouter une erreur si jamais la fonction ne fonctionne pas
+        function(error){ alert("Erreur : Veuillez réessayer plus tard \n" + error); // ici on vient rajouter une erreur si jamais la fonction ne fonctionne pas
     });
     
