@@ -95,7 +95,7 @@ const apiUrl = "http://localhost:3000/api/teddies";
             city: formulaireClient.elements.ville.value,
             email: formulaireClient.elements.email.value,
         };
-      
+        // on ajoute dans le tableau products, chaque id de produits trouver dans le localStorage
         for (let i = 0; i < localStorage.length; i++) {
             products.push(localStorage.key(i));
         }

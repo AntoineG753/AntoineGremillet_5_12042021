@@ -25,18 +25,6 @@
   margin-bottom: 11rem;
 }
 
-.bg-black {
-  background-color: black;
-}
-
-.cl-white {
-  color: white;
-}
-
-.padding-0 {
-  padding: 0;
-}
-
 .margin-0 {
   margin: 0;
 }
@@ -55,6 +43,23 @@
 
 .margin-top-card {
   margin-top: 5vw;
+}
+
+.padding-0 {
+  padding: 0;
+}
+
+.margin-bt {
+  margin-top: 35%;
+  margin-bottom: 37%;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.cl-white {
+  color: white;
 }
 
 .bg-card {
@@ -76,11 +81,6 @@
 .flex-row {
   display: flex;
   flex-direction: row;
-}
-
-.margin-bt {
-  margin-top: 35%;
-  margin-bottom: 37%;
 }
 
 .height-card {

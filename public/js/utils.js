@@ -2,15 +2,14 @@
 
 //  function pour rechercher les produits dans le localStorage
 let rechercheProduitStorage = function (storageProduitId) {
-                    
+    
     if (localStorage.getItem(storageProduitId)) {  
         return parseInt(localStorage.getItem(storageProduitId));
-        
     } else {
         return 0;
     }
 }
-
+//  cette function sert a additonner le nombre total d'article dans le panier
 let nmbpp = function () {
     let nombreProduitPanier = document.getElementById("nombreProduitPanier");
     if (localStorage.length < 1) {

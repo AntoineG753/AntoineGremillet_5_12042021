@@ -29,8 +29,9 @@ fetch(apiUrl)
             cardBody.classList.add("card-body" , "bg-card")
 
             //creation du titre qui comporte le nom de la carte
-            let cardHeader = document.createElement("h3");
+            let cardHeader = document.createElement("h2");
             cardHeader.innerText = data[i]['name']; // on ajoute du text avec innerText a notre h3 que l'on a nomé cardHeader
+            cardHeader.classList.add("h3");
 
             // creation de la balise p qui va contenir la description + ajout de la class card-text
             let cardText = document.createElement('p');
