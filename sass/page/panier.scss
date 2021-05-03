@@ -1,0 +1,35 @@
+.bg-panier{
+    background-color: rgb(251, 249, 252);
+}
+.tableau-style{
+    border-collapse: collapse;
+    text-align: center;
+    margin-top: 2vw;
+    font-size: 0.8rem;
+}
+.fts-panier{
+    font-size: 1rem;
+    font-weight: bold;
+}
+tr, th{
+    border: 1px solid rgb(198, 136, 255);
+}
+th, td{
+    padding: 10px;
+    
+}
+.total-panier{
+    border: 2px solid rgb(198, 136, 255);
+    border-top: 1px solid rgb(198, 136, 255);
+}
+.total-panier p{
+    margin: auto;
+}
+
+
+.text-commande-false {
+    font-size: 5vw;
+    margin-top: 8rem;
+    margin-bottom: 3.5rem;
+    
+}
