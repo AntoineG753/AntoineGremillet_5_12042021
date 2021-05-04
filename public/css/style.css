@@ -19,9 +19,10 @@
 
 .size-box-commande {
   height: 37rem;
+  margin-top: 8rem;
 }
 
-.text-commande-false {
+.text-commande-ture {
   font-size: 5vw;
   margin-top: 8rem;
   margin-bottom: 3.5rem;

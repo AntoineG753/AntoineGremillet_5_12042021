@@ -73,27 +73,27 @@
       <form class="w-auto mt-5" id="formClient">
         <div class="row">
           <div class="col-lg-6 col-md-6">
-            <label for="nom">Nom</label>
+            <label for="nom" class="form-label mt-3">Nom</label>
             <input type="text" name="nom" id="nom" class="form-control" placeholder="nom" minlength="1" maxlength="26" required pattern="[A-Za-z]{1,32}">
           </div>
           <div class="col-lg-6 col-md-6">
-            <label for="prenom">Prénom</label>
+            <label for="prenom" class="form-label mt-3">Prénom</label>
             <input type="text" name="prénom" id="prenom" class="form-control" placeholder="prénom" minlength="1" maxlength="26" required pattern="[A-Za-z]{1,32}">
           </div>
           <div class="col-12 col-lg-7 col-md-7">
-            <label for="email" class="form-label">Email</label>
+            <label for="email" class="form-label mt-3">Email</label>
             <input type="email" id="email" name="email" class="form-control" minlength="6" maxlength="50" required placeholder="nom.prenom@exemple.com">
           </div>
           <div class="col-12 col-lg-9 col-md-9">
-            <label for="adresse" class="form-label">Adresse</label>
-            <input type="text" id="adresse" name="adresse" class="form-control" minlength="7" maxlength="75" placeholder="Adresse" required pattern="^[0-9][A-Za-z0-9 ]{7,75}">
+            <label for="adresse" class="form-label mt-3">Adresse</label>
+            <input type="text" id="adresse" name="adresse" class="form-control" minlength="7" maxlength="75" placeholder="Adresse" required pattern="^[0-9][A-Za-z0-9 ][A-Za-z0-9 ]{7,75}">
           </div>
           <div class="col-12 col-lg-5 col-md-5">
-            <label for="ville" class="form-label">Ville</label>
+            <label for="ville" class="form-label mt-3">Ville</label>
             <input type="text" id="ville" name="ville" class="form-control" minlength="1" maxlength="26" placeholder="Ville" required pattern="\D+">
           </div>
         </div>
-        <div class="col-12 mt-3">
+        <div class="col-12 mt-5">
           <button class="btn btn-outline-primary" type="submit" id="formSubmit">Valider</button>
         </div>
       </form>
