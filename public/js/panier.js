@@ -9,9 +9,10 @@ const apiUrl = "http://localhost:3000/api/teddies";
         iconPanierVide.classList.remove("hidden")
     } else {
         let I = localStorage.length;
-        let prixTotalPanier = 0;
+        let prixTotalPanier = 0;  // init du prixTotalPanier
         let panierPlein = document.getElementById("panierPlein");
         panierPlein.classList.remove("visually-hidden")
+        // boucle for qui vas rajouter une ligne  chaque article different
         for (let i = 0; i < I; i++) {
 
             let e = localStorage.key(i);
@@ -60,6 +61,7 @@ const apiUrl = "http://localhost:3000/api/teddies";
             let totalPrixPanier = document.getElementById("totalPrixPanier");
             totalPrixPanier.innerHTML = prixTotalPanier;
 
+            // gestion du boutton delete
             let btnId = document.getElementById(e);
             btnId.addEventListener('click',  function () {
                 localStorage.removeItem(e)
@@ -113,7 +115,7 @@ const apiUrl = "http://localhost:3000/api/teddies";
             localStorage.clear();
             localStorage.setItem("orderId", `${data.orderId}`);
             localStorage.setItem("prixTotal", `${prixTotal}`)
-            window.location.assign("./commande.html");
+            window.location.assign("./commande.html"); // on lui dit ou allez ensuite
            
         })
     });

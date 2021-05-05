@@ -62,6 +62,7 @@ fetch(apiUrl + `/${articleId}`) // on fait un fetch normale mais on a mis les pa
             }
         });
 
+        // gestion du boutton
         document.getElementById(_id).addEventListener('click', function () {
 
             
